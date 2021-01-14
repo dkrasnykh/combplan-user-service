@@ -37,8 +37,6 @@ public class UserServiceImpl implements UserService {
         } catch (DataIntegrityViolationException e) {
             e.printStackTrace();
         }
-
-
         return userDto;
     }
 
