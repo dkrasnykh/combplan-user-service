@@ -1,9 +1,9 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/combplan_user_service
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
+    url: jdbc:h2:file:.\src\main\resources\data\base;AUTO_SERVER=true
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
 
   jpa:
     show-sql: true
@@ -14,7 +14,7 @@ spring:
         format_sql: true
         show_sql: true
         use_sql_comments: true
-        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+        dialect: org.hibernate.dialect.H2Dialect
 
   kafka:
     bootstrap-servers: localhost:9092
